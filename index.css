@@ -1,0 +1,28 @@
+body {
+  background-color: #27a744;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+canvas {
+  outline: 1em solid rgb(253, 207, 3);
+  box-shadow: 0 1.5em 3.5em black;
+  margin-top: 1em;
+}
+
+h1 {
+  padding: 1em;
+  background: bisque;
+  border-radius: 2em;
+  box-shadow: 0 0.2em 10px #444;
+}
+
+span {
+  color: tomato;
+}
