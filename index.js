@@ -103,16 +103,16 @@ function draw() {
 
     // Snake Direction Frame Rules
     if (snake[0].x < 0) {
-        snake[0].x = canvasWidth
+        snake[0].x = canvasWidth - 50
     }
-    if (snake[0].x > canvasWidth) {
-        snake[0].x = 0
+    if (snake[0].x > canvasWidth - 50) {
+        snake[0].x = 50
     }
     if (snake[0].y < 0) {
-        snake[0].y = canvasHeight
+        snake[0].y = canvasHeight - 50
     }
-    if (snake[0].y > canvasHeight) {
-        snake[0].y = 0
+    if (snake[0].y > canvasHeight - 50) {
+        snake[0].y = 50
     }
 
     // Snake Added Tail !!!
