@@ -6,6 +6,7 @@
 // 4 - Snake eger yemi yerse yani snake in ve eat in posizyonlari esit ise kuyruk pop() edilmez de snake icerisinde 2 adet kuyruk olur. Yani bir snake degiskenine bir posizyon degeri daha atilir. Sonra ornegin yilan saga hareket ettiginde bir w:50 h:50 degirinde bir kutu cizilir ve sonra snake degiskeninin length i kadar dongu ile birlikte snake kutulari yazidirlir. 
 
 
+
 // Document Variables
 const score = document.getElementsByClassName('score')[0];
 const canvas = document.getElementById('canvas');
@@ -71,7 +72,7 @@ function directoryFunc(event) {
 
 setInterval(() => {
     draw()
-}, 100);
+}, 125);
 
 function draw() {
     // Clear canvas
@@ -101,18 +102,18 @@ function draw() {
             break;
     }
 
-    // Snake Direction Frame Rules
+    // Snake Frame Rules
     if (snake[0].x < 0) {
         snake[0].x = canvasWidth - 50
     }
     if (snake[0].x > canvasWidth - 50) {
-        snake[0].x = 50
+        snake[0].x = 0
     }
     if (snake[0].y < 0) {
         snake[0].y = canvasHeight - 50
     }
     if (snake[0].y > canvasHeight - 50) {
-        snake[0].y = 50
+        snake[0].y = 0
     }
 
     // Snake Added Tail !!!
@@ -141,6 +142,7 @@ function draw() {
     for (let i = 3; i < snake.length; i++) {
         if (snake[0].x === snake[i].x && snake[0].y === snake[i].y) {
             dead.play()
+            snakePie = 0
             snake = [{ x: 50, y: 50 }]
         }
     }
